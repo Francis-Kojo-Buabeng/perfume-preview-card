@@ -1,0 +1,157 @@
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--Very-dark-blue);
+}
+
+.container{
+    max-width: 20rem;
+    display: flex;
+    width: 100%;
+    padding-bottom: 20px;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--Cream);
+    overflow: hidden;
+}
+
+#mobile-display{
+    display: block;
+    margin: 0 auto;
+    width: 92%;
+    border-top-right-radius:0.45rem ;
+    border-top-left-radius:0.45rem ;
+    margin-top: 15px;
+}
+
+#desktop-display{
+    display: none;
+}
+
+.card-info {
+    margin: 0 auto;
+    width: 92%;
+    padding-bottom: 20px;
+    background-color: var(--White);
+    border-bottom-left-radius: 0.45rem;
+    border-bottom-right-radius: 0.45rem;
+}
+
+#sub-card {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.first-header {
+    margin-top: 20px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: var(--Dark-grayish-blue);
+}
+
+h1 {
+    margin-top: 5px;
+    font-family: 'Fraunces', serif;
+}
+
+#description {
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700ssss;
+    color: var(--Dark-grayish-blue);
+}
+
+#Price {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#Due-price {
+    color: var(--Dark-cyan);
+    font-family: 'Fraunces', serif;
+    font-size: 1.8rem;
+}
+
+#Actual-price { 
+    text-decoration: line-through;
+    margin-left: 10px;
+    color: var(--Dark-grayish-blue);
+}
+
+button {
+    margin: 0 auto;
+    width: 90%;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    color: var(--White);
+    border-radius: 0.425rem;
+    background-color: var(--Dark-cyan);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#icon-cart {
+    margin-right: 10px;
+}
+
+
+
+
+@media screen and (min-width: 576px){
+    #mobile-display{
+        display: none;
+    }
+
+    body{
+        background-color: var(--Cream);
+    }
+    .container {
+        min-width: 30rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #desktop-display {
+        width: 250px;
+        border-top-left-radius: 0.45rem;
+        border-bottom-left-radius: 0.45rem;
+        display: block;
+    }
+
+    .card-info {
+        border-top-right-radius: 0.45rem;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0.45rem;
+    }
+}
+
+.attribution {
+        font-size: 11px; 
+        text-align: center; 
+    }
+.attribution a {
+        color: hsl(228, 45%, 44%); 
+    } 
